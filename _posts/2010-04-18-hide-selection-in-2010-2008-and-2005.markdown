@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Hide Selection in 2010, 2008 and 2005"
+comments: true
+tags: [Visual Studio,Macros]
+---
+
+
+Visual Studio 2010 is now out and I thought I would share a quick tip that I find useful. This shortcut can be found under Edit—> Outlining –> Hide Selection, and is bound by default to the hot key of CTRL+M, CTRL+H.
+
+The usefulness of this feature shines when working on large blocks of code, you can highlight any portion of code, apply the Hide Selection option, and the code will 'Fold' out of sight - allowing you to focus just on the portion you are interested in. This information is stored in your .suo file, so other members of the team are not affected and will be persisted to future sessions. I have found this to work in all types of source files: .aspx, .cs, .vb, .css, and many others.
+
+This relatively little known feature was in previous versions of Visual Studio, but became broken after 2005 SP1. Jay Flowers even wrote a [CodeRush plugin](http://jayflowers.com/WordPress/?p=134) to accomplish the same thing.
+
+If you are still on 2005/2008 and would like to have this feature now I provide to you the following macro:
+
+{% highlight vbnet %}
+Sub FoldCode()
+    Dim selection As TextSelection = DTE.ActiveDocument.Selection
+    selection.OutlineSection()
+End Sub
+{% endhighlight %}

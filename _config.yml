@@ -1,0 +1,60 @@
+# Site wide configuration
+
+title:            Brian Schmitt
+locale:           en_US
+url:
+
+
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+
+# Site owner
+owner:
+  name: Brian Schmitt
+  avatar: http://www.gravatar.com/avatar/f47296b2bda388e43dd11d44ba5adac7?s=160
+  bio: "I write about software development, security, and the tools of our trade."
+  email: brianschmitt@gmail.com
+  disqus-shortname: brianschmitt
+  twitter: brianschmitt
+  facebook: #username
+  google:
+    plus: #username
+    analytics: UA-205448-3
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: brianschmitt
+  stackoverflow: 30492/brian-schmitt
+  linkedin: briangschmitt
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+  feedburner: brianschmitt
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
